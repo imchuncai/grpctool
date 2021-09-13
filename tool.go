@@ -50,7 +50,7 @@ func MustForInit(err error) {
 	if err == nil {
 		return
 	}
-	_logger.Log(log.Error, err, debug.Stack())
+	_logger.Log(log.Error, err, string(debug.Stack()))
 	panic(err)
 }
 
